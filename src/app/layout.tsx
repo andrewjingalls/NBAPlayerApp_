@@ -10,8 +10,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+    <><head>
+      <title>{metadata.title}</title>
+      <link rel="icon" href={metadata.icon} />
+    </head><html lang="en">
+        <body>{children}</body>
+      </html></>
   )
 }
